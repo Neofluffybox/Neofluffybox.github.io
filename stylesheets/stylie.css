@@ -138,16 +138,22 @@ nav {
     margin-bottom: 25px;
 }
     .navbuttons{
-        display: block;
-        width: 80px;
-        margin: auto;
-        margin-top: 5px;
+        background-color: #9999bb;
         border: 1px solid black;
         border-radius: 25px;
-        text-align: center;
-        background-color: #ccaa88;
-        text-decoration: none;
         color: black;
+        display: block;
+        height: 20px;
+        margin: auto;
+        margin-top: 5px;
+        width: 80px;
+        text-align: center;
+        text-decoration: none;
+    }
+    #skyrim {
+        height: 20px;
+        font-size: 16px;
+        background-color: #9999bb;
     }
     nav ul li{
         margin: 5px;
