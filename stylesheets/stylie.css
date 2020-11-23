@@ -53,8 +53,10 @@ table {
 }
 
 body {
-    border: 5px solid black;
-    background-color: #ee9977;
+    display: grid;
+    grid-template-columns: 500px;
+    background-color: #111122;
+    justify-content: center;
 }
     .biggerC {
         display: flex;
@@ -64,16 +66,20 @@ hr {
     border: 1px solid black;
 }
 header {
-    border: 5px solid green;
-    background-color: #ff9955;
+    border: 2px solid #333;
+    border-radius: 15px;
+    background: linear-gradient(#444, #226688);
+    color: #000;
     width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin-bottom: 25px;
 }
     header h1 {
         font-size: 28px;
         font-weight: bold;
+        margin-top: 5px;
     }
     header ul li {
         float: left;
@@ -86,7 +92,7 @@ header {
         height: 30px;
         border: none;
         text-decoration: none;
-        color: #000;
+        color: #aaa;
     }
     #twit::after {
         display: block;
@@ -106,7 +112,7 @@ header {
         height: 30px;
         border: none;
         text-decoration: none;
-        color: #000;
+        color: #aaa;
     }
     #git::after {
         display: block;
@@ -120,31 +126,80 @@ header {
     }
 
 nav {
-    border: 5px solid blue;
+    border: 2px solid #333;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background: linear-gradient(#666, #446688, #666);
     width: 25%;
+    text-align: center;
+    margin-bottom: 25px;
 }
     .navbuttons{
         display: block;
-        width: 80%;
+        width: 80px;
+        margin: auto;
+        margin-top: 5px;
         border: 1px solid black;
-        border-radius: 25%;
+        border-radius: 25px;
         text-align: center;
         background-color: #ccaa88;
         text-decoration: none;
         color: black;
     }
+    nav ul li{
+        margin: 5px;
+    }
     
 
 article {
-    border: 5px solid violet;
+    border: 2px solid #333;
+    border-top: none;
+    border-bottom: none;
+    background: linear-gradient(#666, #446688, #666);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 25px;
+    text-align: center;
     width: 75%;
 }
+    article div h2{
+        margin:5px; 
+        margin-top: 40px;
+        font-size: 18px;
+    }
 
 footer{
-    border: 5px solid brown;
+    border: 2px solid #333;
+    border-radius: 15px;
+    background: linear-gradient(#226688, #444);
     width: 100%;
 }
     footer h3{
         font-size: 18px;
         font-weight: 550;
+        margin: 5px;
     }
+    footer div {
+        margin: 5px;
+    }
+
+@media only screen and (max-width: 400px) {
+    body {
+        grid-template-columns: 300px;
+    }
+    .navbuttons {
+        width: 60px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        grid-template-columns: 900px;
+    }
+    .navbuttons {
+        width: 100px;
+    }
+}
