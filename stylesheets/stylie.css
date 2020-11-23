@@ -192,21 +192,21 @@ footer{
         margin: 5px;
     }
 
-@media only screen and (max-width: 400px) {
-    body {
-        grid-template-columns: 300px;
-    }
-    .navbuttons {
-        width: 60px;
-    }
-}
-
 @media only screen and (max-width: 600px) {
     body {
         grid-template-columns: 400px;
     }
     .navbuttons {
         width: 70px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        grid-template-columns: 300px;
+    }
+    .navbuttons {
+        width: 60px;
     }
 }
 
