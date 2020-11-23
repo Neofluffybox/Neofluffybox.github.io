@@ -194,10 +194,10 @@ footer{
 
 @media only screen and (max-width: 400px) {
     body {
-        grid-template-columns: 279px;
+        grid-template-columns: 280px;
     }
     .navbuttons {
-        width: 55px;
+        width: 58px;
     }
 }
 
