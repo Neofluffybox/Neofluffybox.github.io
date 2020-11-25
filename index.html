@@ -19,54 +19,88 @@
 
             <ul>
                 <li>
-                    <a id='twit' href="https://twitter.com/Neofluffybox" target='_blank' rel='noopener noreferrer'>
-                        Twitter:
-                    </a>
+
                 </li>
                 <li>
-                    <a id='git' href='https://github.com/Neofluffybox' target='_black' rel='noopener noreferrer'>
-                        Github:
-                    </a>
+
                 </li>
             </ul>
         </header>
         <nav>
-            <ul>
-                <li>Rock, Paper, Scissors game:
-                    <a class='navbuttons' href="https://neofluffybox.github.io/practiceSite/index.html" target="_blank"
-                        ref="noopener noreferrer">R.P.S.</a>
-                </li>
-                <li>Etchasketch project:
-                    <a class='navbuttons' href="https://neofluffybox.github.io/etchySketchy/index.html" target="_blank"
-                        ref="noreferrer noopener">Sketch</a>
-                </li>
-                <li>Skryim item value calculator:
-                    <button id='skyrim' class='navbuttons' type='button'>Start</button>
-                </li>
-            </ul>
+            <div class='set'>
+                <span class='title'>
+                    Where to?
+                    <hr>
+                </span>
+                <div class='gallery'>
+                    <div class='galleryItem'><a class='buttons' href='#projects'>Projects</a></div>
+                    <div class='galleryItem'><a class='buttons' href='#about'>About</a></div>
+                    <div class='galleryItem'><a class='buttons' href='#footer'>Contact</a></div>
+                    <div class='galleryItem'>
+                        <a id='twit' href="https://twitter.com/Neofluffybox" target='_blank'
+                            rel='noopener noreferrer'></a>
+                    </div>
+                    <div class='galleryItem'>
+                        <a id='git' href='https://github.com/Neofluffybox' target='_black'
+                            rel='noopener noreferrer'></a>
+                    </div>
+                </div>
+            </div>
         </nav>
         <article>
-            <div>
-                <h2>
+            <div class='set'>
+                <a id='projects'></a>
+                <span class='title'>
+                    Projects
+                    <hr>
+                </span>
+                <div class='gallery'>
+                    <div class='galleryItem'>
+                        <label class='desc' for='rps'>Rock, Paper, Scissors game:</label>
+                        <a name='rps' class='navbuttons' href="https://neofluffybox.github.io/practiceSite/index.html"
+                            target="_blank" ref="noopener noreferrer">
+                            <img src='images/rps.jpeg' alt='pic of my rock paper scissors website'>
+                        </a>
+                    </div>
+                    <div class='galleryItem'>
+                        <label class='desc' for='etchy'>Etchasketch project:</label>
+                        <a name='etchy' class='navbuttons' href="https://neofluffybox.github.io/etchySketchy/index.html"
+                            target="_blank" ref="noreferrer noopener">
+                            <img src='images/etchy.jpeg' alt='pic of my etchasketch website'>
+                        </a>
+                    </div>
+                    <div class='galleryItem'>
+                        <span class='desc'>Skyrim item value calculator:</span>
+                        <button id='skyrim' type='button'>Start</button>
+                    </div>
+                </div>
+            </div>
+            <div class='set'>
+                <a id='about'></a>
+                <span class='title'>
+                    About me:
+                    <hr>
+                </span>
+                <p class='desc'>
                     I'm a plebian from Florida living in Colorado Springs, CO these days.
                     I've been working toward becoming a software developer and hope
                     to find a job soon in the industry! I've got 2 cats (Priscilla & Bean) and they are my heart.
-                </h2>
-            </div>
-            <div class='gallery'>
-                <ul>
-                    <li></li>
-                </ul>
+                </p>
             </div>
         </article>
         <footer>
-            <div>
-                <h3>Nicholas Watson</h3>
-                <hr>
-                Address: 380 Crestone Lane apt. #24<br>
-                Colorado Springs, CO, 80905<br>
-                Email: neonicc95@gmail.com<br>
-                Phone: (850) 490-2539
+            <div class='set'>
+                <a id='footer'></a>
+                <span class='title'>
+                    Nicholas Watson
+                    <hr>
+                </span>
+                <p class='desc'>
+                    Address: 380 Crestone Lane apt. #24<br>
+                    Colorado Springs, CO, 80905<br>
+                    Email: <a href='mailto:neonicc95@gmail.com'>neonicc95@gmail.com</a><br>
+                    Phone: (850) 490-2539
+                </p>
             </div>
         </footer>
     </div>

@@ -65,6 +65,7 @@ body {
 hr {
     border: 1px solid black;
 }
+
 header {
     border: 2px solid #333;
     border-radius: 15px;
@@ -84,15 +85,16 @@ header {
     header ul li {
         float: left;
     }
+
+nav {
+    width: 100%;
+}
     #twit {
         display: block;
         margin: 4px;
         margin-top: 6px;
-        width: 90px;
-        height: 30px;
-        border: none;
-        text-decoration: none;
-        color: #aaa;
+        width: 30px;
+        height: 20px;
     }
     #twit::after {
         display: block;
@@ -101,18 +103,14 @@ header {
         background: url('/images/twitterlogo.png') no-repeat;
         width: 25px;
         height: 25px;
-        background-size: 25px 25px;;
+        background-size: 25px 25px;
         border-radius: 50%;
     }
     #git {
         display: block;
         margin: 4px;
         margin-top: 6px;
-        width: 90px;
-        height: 30px;
-        border: none;
-        text-decoration: none;
-        color: #aaa;
+        width: 30px;
     }
     #git::after {
         display: block;
@@ -125,79 +123,74 @@ header {
         border-radius: 50%;
     }
 
-nav {
-    border: 2px solid #333;
-    border-top: none;
-    border-bottom: none;
-    border-right: none;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    background: linear-gradient(#666, #446688, #666);
-    width: 25%;
-    text-align: center;
+.set {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     margin-bottom: 25px;
+    border-radius: 15px;
+    border: 2px solid #333;
+    background: linear-gradient(#444, #446688, #444);
+    text-align: center;
 }
-    .navbuttons{
-        background-color: #9999bb;
-        border: 1px solid black;
-        border-radius: 25px;
-        color: black;
+    .title {
+        font-size: 16px;
+        margin: 3px;
+        font-weight: 550;
+    }
+    .desc {
+        margin: 3px;
+        margin-bottom: 10px;
+        margin-top: 1px;
+    }
+    .gallery {
+        display: flex;
+        flex-flow: row;
+        overflow: auto;
+        align-items: baseline;
+    }
+    .buttons {
         display: block;
-        height: 20px;
-        margin: auto;
-        margin-top: 5px;
-        width: 85px;
-        text-align: center;
+        border: 1px solid #333;
+        padding: 8px;
+        background-color: #446688;
+        border-radius: 12px;
         text-decoration: none;
+        color: Black;
+    }
+    .gallery a img {
+        height: 50px;
+        width: 50px;
+    }
+    .galleryItem {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        align-items: center;
+        text-align: center;
     }
     #skyrim {
-        height: 20px;
+        border-radius: 8px;;
+        width: 70px;
+        height: 25px;
         font-size: 16px;
-        background-color: #9999bb;
-    }
-    nav ul li{
-        margin: 5px;
-    }
-    
-
-article {
-    border: 2px solid #333;
-    border-top: none;
-    border-bottom: none;
-    background: linear-gradient(#666, #446688, #666);
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    margin-bottom: 25px;
-    text-align: center;
-    width: 75%;
-}
-    article div h2{
-        margin:5px; 
-        margin-top: 40px;
-        font-size: 18px;
+        background-color: #335599;
+        margin-top: 12px; 
     }
 
 footer{
-    border: 2px solid #333;
-    border-radius: 15px;
-    background: linear-gradient(#226688, #444);
     width: 100%;
 }
-    footer h3{
-        font-size: 18px;
-        font-weight: 550;
-        margin: 5px;
-    }
-    footer div {
-        margin: 5px;
-    }
 
 @media only screen and (max-width: 400px) {
     body {
         grid-template-columns: 280px;
     }
-    .navbuttons {
+    #skyrim {
         width: 58px;
+    }
+    .buttons {
+        padding: 6px;
     }
 }
 
@@ -205,7 +198,7 @@ footer{
     body {
         grid-template-columns: 380px;
     }
-    .navbuttons {
+    #skyrim {
         width: 70px;
     }
 }
@@ -214,7 +207,7 @@ footer{
     body {
         grid-template-columns: 525px;
     }
-    .navbuttons {
+    #skyrim {
         width: 78px;
     }
 }
@@ -222,7 +215,10 @@ footer{
     body {
         grid-template-columns: 800px;
     }
-    .navbuttons {
+    #skyrim {
         width: 100px;
+    }
+    .buttons {
+        padding: 10px;
     }
 }
