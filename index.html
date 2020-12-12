@@ -16,15 +16,6 @@
             <h1>Nicholas Watson
                 <hr>
             </h1>
-
-            <ul>
-                <li>
-
-                </li>
-                <li>
-
-                </li>
-            </ul>
         </header>
         <nav>
             <div class='set'>
@@ -71,9 +62,46 @@
                     </div>
                     <div class='galleryItem'>
                         <span class='desc'>Skyrim item value calculator:</span>
-                        <button id='skyrim' type='button'>Start</button>
+                        <button id='skyrim' class='goBtn' type='button'>Go</button>
+                    </div>
+                    <div class='galleryItem'>
+                        <span class='desc'>Random drink quizzer:</span>
+                        <button id='drink' class='goBtn' type='button'>Go</button>
                     </div>
                 </div>
+            </div>
+            <div class='set' id='drinkDisplay'>
+                <span class='title' id='drinkTitle'>
+                    drink title
+                    <hr>
+                </span>
+                <div class='gallery'>
+                    <div class='galleryItem' id='shots'>
+                        <span class='title'>
+                            Shots
+                            <hr>
+                        </span>
+                        <span class='desc' id='shotsNum'>0</span>
+                    </div>
+                    <div class='galleryItem' id='pumps'>
+                        <span class='title'>
+                            Pumps
+                            <hr>
+                        </span>
+                        <span class='desc' id='pumpsNum'>0</span>
+                    </div>
+                    <div class='galleryItem' id='scoops'>
+                        <span class='title'>
+                            Scoops
+                            <hr>
+                        </span>
+                        <span class='desc' id='scoopsNum'>0</span>
+                    </div>
+                </div>
+                <div>
+                    <button id='newDrink' class='goBtn' type='button'>New</button>
+                </div>
+
             </div>
             <div class='set'>
                 <a id='about'></a>

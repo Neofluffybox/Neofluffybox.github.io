@@ -148,6 +148,7 @@ nav {
         flex-flow: row;
         overflow: auto;
         align-items: baseline;
+        justify-content: space-around;
     }
     .buttons {
         display: block;
@@ -169,13 +170,26 @@ nav {
         align-items: center;
         text-align: center;
     }
-    #skyrim {
+    .goBtn {
         border-radius: 8px;;
         width: 70px;
         height: 25px;
         font-size: 16px;
         background-color: #335599;
         margin-top: 12px; 
+    }
+    #drinkDisplay {
+        display: none;
+        flex-direction: column;
+    }
+    #shots {
+        display: none;
+    }
+    #pumps {
+        display: none;
+    }
+    #scoops {
+        display: none;
     }
 
 footer{
