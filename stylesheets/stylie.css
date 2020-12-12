@@ -204,7 +204,12 @@ footer{
     body {
         grid-template-columns: 280px;
     }
-
+    .set {
+        width: 270px;
+    }
+    header{
+        width: 270px;
+    }
     #skyrim {
         width: 58px;
     }
@@ -218,10 +223,10 @@ footer{
         grid-template-columns: 380px;
     }
     .set {
-        width: 270px;
+        width: 350px;
     }
     header{
-        width: 270px;
+        width: 350px;
     }
     #skyrim {
         width: 70px;
@@ -232,13 +237,25 @@ footer{
     body {
         grid-template-columns: 525px;
     }
+    .set {
+        width: 500px;
+    }
+    header{
+        width: 500px;
+    }
     #skyrim {
         width: 78px;
     }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1001px) {
     body {
         grid-template-columns: 800px;
+    }
+    .set {
+        width: 680px;
+    }
+    header{
+        width: 680px;
     }
     #skyrim {
         width: 100px;
