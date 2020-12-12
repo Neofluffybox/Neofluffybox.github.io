@@ -71,7 +71,7 @@ header {
     border-radius: 15px;
     background: linear-gradient(#444, #226688);
     color: #000;
-    width: 100%;
+    width: 600px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -82,8 +82,12 @@ header {
         font-weight: bold;
         margin-top: 5px;
     }
-    header ul li {
-        float: left;
+    header h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    #spclSet {
+        margin-bottom: 0px;
     }
 
 nav {
@@ -126,7 +130,7 @@ nav {
 .set {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 600px;
     margin-bottom: 25px;
     border-radius: 15px;
     border: 2px solid #333;
@@ -200,6 +204,7 @@ footer{
     body {
         grid-template-columns: 280px;
     }
+
     #skyrim {
         width: 58px;
     }
@@ -211,6 +216,12 @@ footer{
 @media only screen and (max-width: 600px) and (min-width: 401px) {
     body {
         grid-template-columns: 380px;
+    }
+    .set {
+        width: 270px;
+    }
+    header{
+        width: 270px;
     }
     #skyrim {
         width: 70px;
