@@ -150,9 +150,12 @@ nav {
     .gallery {
         display: flex;
         flex-flow: row;
-        overflow: auto;
+        overflow: scroll;
         align-items: baseline;
         justify-content: space-around;
+    }
+    .gallery::-webkit-scrollbar {
+        width: 0px;
     }
     .buttons {
         display: block;
