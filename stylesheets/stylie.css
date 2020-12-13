@@ -152,10 +152,22 @@ nav {
         flex-flow: row;
         overflow: scroll;
         align-items: baseline;
-        justify-content: space-around;
+        justify-content: flex-start;
     }
     .gallery::-webkit-scrollbar {
         width: 0px;
+    }
+    #spclGallery {
+        justify-content: flex-start;
+    }
+    #logo {
+        display: block;
+        border: 1px solid #333;
+        padding: 2px;
+        padding-bottom: 10px;
+        padding-right: 6px;
+        background-color: #446688;
+        border-radius: 50%;
     }
     .buttons {
         display: block;
