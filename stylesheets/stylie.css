@@ -200,9 +200,9 @@ nav {
     }
     .goBtn {
         border-radius: 8px;;
-        width: 70px;
+        width: 65px;
         height: 25px;
-        font-size: 16px;
+        font-size: 13px;
         background-color: #335599;
         margin-top: 12px; 
     }
@@ -257,6 +257,10 @@ footer{
     }
     .set {
         width: 350px;
+    }
+    .goBtn {
+        font-size: 12px;
+        width: 55px;
     }
     header{
         width: 350px;
