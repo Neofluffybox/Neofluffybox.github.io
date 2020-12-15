@@ -157,6 +157,12 @@ nav {
     #drinkBlock {
         justify-content: space-evenly;
     }
+    .checker {
+        display: flex;
+        width: 24px;
+        background-color: #aaaacc;
+        border-radius: 5px;
+    }
     .gallery::-webkit-scrollbar {
         width: 0px;
     }
@@ -207,10 +213,19 @@ nav {
     #shots {
         display: none;
     }
+    #shotsNum {
+        display: none;
+    }
     #pumps {
         display: none;
     }
+    #pumpsNum {
+        display: none;
+    }
     #scoops {
+        display: none;
+    }
+    #scoopsNum {
         display: none;
     }
 

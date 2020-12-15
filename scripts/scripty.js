@@ -34,6 +34,11 @@ const shotsNum = document.querySelector('#shotsNum');
 const pumpsNum = document.querySelector('#pumpsNum');
 const scoopsNum = document.querySelector('#scoopsNum');
 const newDrinkBtn = document.querySelector('#newDrink');
+const checkerBtn = document.querySelector('#checkerBtn');
+const checkedShots = document.querySelector('#checkedShots');
+const checkedPumps = document.querySelector('#checkedPumps');
+const checkedScoops = document.querySelector('#checkedScoops');
+const answerBtn = document.querySelector('#answer');
 
 //classes and functions
 class beverage {
@@ -103,12 +108,17 @@ class beverage {
             case 'medium hot Latte':
             case 'medium hot Cappuccino':
             case 'medium iced Latte':
+            case 'small frozen Latte':
                 pumps = 3;
                 break;
             case 'large hot Latte':
             case 'large hot Cappuccino':
             case 'large iced Latte':
+            case 'medium frozen Latte':
                 pumps = 4;
+                break;
+            case 'large frozen Latte':
+                pumps = 5;
                 break;
         }
         return pumpsNum.innerHTML = pumps;
@@ -177,6 +187,29 @@ class beverage {
         }
         return drinkTitle.innerHTML = name;
     }
+    checker() {
+        if (shotsCheckerBox.value == shotsNum.innerHTML) {
+            shotsCheckerBox.style.color = 'green';
+            checkedShots.innerHTML = 'correct!';
+        } else {
+            shotsCheckerBox.style.color = 'red';
+            checkedShots.innerHTML = 'incorrect';
+        };
+        if (pumpsCheckerBox.value == pumpsNum.innerHTML) {
+            pumpsCheckerBox.style.color = 'green';
+            checkedPumps.innerHTML = 'correct!';
+        } else {
+            pumpsCheckerBox.style.color = 'red';
+            checkedPumps.innerHTML = 'incorrect';
+        };
+        if (scoopsCheckerBox.value == scoopsNum.innerHTML) {
+            scoopsCheckerBox.style.color = 'green';
+            checkedScoops.innerHTML = 'correct!';
+        } else {
+            scoopsCheckerBox.style.color = 'red';
+            checkedScoops.innerHTML = 'incorrect';
+        };
+    }
 }
 
 let randomSize = () => {
@@ -210,6 +243,15 @@ function resetDisplay(x) {
     disp.style.display = 'none';
 }
 
+function resetContent() {
+    shotsCheckerBox.value = '';
+    pumpsCheckerBox.value = '';
+    scoopsCheckerBox.value = '';
+    checkedShots.innerHTML = '';
+    checkedPumps.innerHTML = '';
+    checkedScoops.innerHTML = '';
+}
+
 //menu
 let drinkList = [];
 
@@ -234,8 +276,20 @@ drinkList.push(frozenMocha);
 drinkBtn.addEventListener('click', () => {
     toggleDisplay('#drinkDisplay');
     randomDrink().display();
+    resetContent();
 });
 
 newDrinkBtn.addEventListener('click', () => {
     randomDrink().display();
+    resetContent();
+});
+
+checkerBtn.addEventListener('click', () => {
+    randomDrink().checker();
+});
+
+answerBtn.addEventListener('click', () => {
+    toggleDisplay('#shotsNum');
+    toggleDisplay('#pumpsNum');
+    toggleDisplay('#scoopsNum');
 });
