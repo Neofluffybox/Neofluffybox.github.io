@@ -50,71 +50,132 @@ class beverage {
     set size(x) { return this._size = x; }
     shotDeterminer() {
         toggleDisplay('#shots');
-        if (this._size == 'small' && this._type == 'frozen') {
-            return shotsNum.innerHTML = '6';
-        } else if (this._size == 'medium' && this._type == 'frozen') {
-            return shotsNum.innerHTML = '8';
-        } else if (this._size == 'large' && this._type == 'frozen') {
-            return shotsNum.innerHTML = '10';
-        } else if (this._size == 'small') {
-            return shotsNum.innerHTML = '2';
-        } else if (this._size == 'medium') {
-            return shotsNum.innerHTML = '2';
-        } else if (this._size == 'large' && this._type == 'iced') {
-            return shotsNum.innerHTML = '3';
-        } else if (this._size == 'large') {
-            return shotsNum.innerHTML = '4';
-        } else { return shotsNum.innerHTML = 'unsure'; }
+        let name = `${this.size} ${this.type} ${this.name}`;
+        let shots;
+        switch (name) {
+            case 'small hot Latte':
+            case 'small hot Cappuccino':
+            case 'small hot Mocha':
+            case 'small iced Latte':
+            case 'small iced Mocha':
+                shots = 2;
+                break;
+            case 'medium hot Latte':
+            case 'medium hot Cappuccino':
+            case 'medium hot Mocha':
+            case 'medium iced Latte':
+            case 'medium iced Mocha':
+                shots = 2;
+                break;
+            case 'large iced Latte':
+            case 'large iced Mocha':
+                shots = 3;
+            case 'large hot Latte':
+            case 'large hot Cappuccino':
+            case 'large hot Mocha':
+                shots = 4;
+                break;
+            case 'small frozen Latte':
+            case 'small frozen Mocha':
+                shots = 6;
+                break;
+            case 'medium frozen Latte':
+            case 'medium frozen Mocha':
+                shots = 8;
+                break;
+            case 'large frozen Latte':
+            case 'large frozen Mocha':
+                shots = 10
+                break;
+        }
+        return shotsNum.innerHTML = shots;
     }
     pumpDeterminer = () => {
         toggleDisplay('#pumps');
-        if (this._size == 'small') {
-            return pumpsNum.innerHTML = `2`;
-        } else if (this._size == 'medium') {
-            return pumpsNum.innerHTML = `3`;
-        } else {
-            return pumpsNum.innerHTML = `4`;
-        };
+        let name = `${this.size} ${this.type} ${this.name}`;
+        let pumps;
+        switch (name) {
+            case 'small hot Latte':
+            case 'small hot Cappuccino':
+            case 'small iced Latte':
+                pumps = 2;
+                break;
+            case 'medium hot Latte':
+            case 'medium hot Cappuccino':
+            case 'medium iced Latte':
+                pumps = 3;
+                break;
+            case 'large hot Latte':
+            case 'large hot Cappuccino':
+            case 'large iced Latte':
+                pumps = 4;
+                break;
+        }
+        return pumpsNum.innerHTML = pumps;
     }
     scoopDeterminer = () => {
         toggleDisplay('#scoops');
-        if (this._size == 'small' && this._name == 'Mocha' && this._type == 'frozen') {
-            return scoopsNum.innerHTML = `2.5`;
-        } else if (this._size == 'medium' && this._name == 'Mocha' && this._type == 'frozen') {
-            return scoopsNum.innerHTML = `3`;
-        } else if (this._size == 'large' && this._name == 'Mocha' && this._type == 'frozen') {
-            return scoopsNum.innerHTML = `3.5`;
-        } else if (this._size == 'small' && this._name == 'Mocha') {
-            return scoopsNum.innerHTML = '2';
-        } else if (this._size == 'medium' && this._name == 'Mocha') {
-            return scoopsNum.innerHTML = '2.5';
-        } else if (this._size == 'large' && this._name == 'Mocha') {
-            return scoopsNum.innerHTML = '3';
-        } else {
-            return scoopsNum.innerHTML = 'unsure';
+        let name = `${this.size} ${this.type} ${this.name}`;
+        let scoops;
+        switch (name) {
+            case 'small hot Mocha':
+            case 'small iced Mocha':
+                scoops = 2;
+                break;
+            case 'medium hot Mocha':
+            case 'medium iced Mocha':
+            case 'small frozen Mocha':
+                scoops = 2.5;
+                break;
+            case 'large hot Mocha':
+            case 'large iced Mocha':
+            case 'medium frozen Mocha':
+                scoops = 3;
+                break;
+            case 'large frozen Mocha':
+                scoops = 3.5;
+                break;
         }
+        return scoopsNum.innerHTML = scoops;
     }
     display() {
         resetDisplay('#shots');
         resetDisplay('#pumps');
         resetDisplay('#scoops');
-        if (this._name == 'Mocha' && this._type == 'hot') {
-            this.shotDeterminer();
-            this.scoopDeterminer();
-            return drinkTitle.innerHTML = `${this._size} ${this._type} ${this._name}`;
-        } else if (this._name == 'Mocha' && this._type == 'iced') {
-            this.shotDeterminer();
-            this.scoopDeterminer();
-            return drinkTitle.innerHTML = `${this._size} ${this._type} ${this._name}`;
-        } else if (this._name == 'Mocha' && this._type == 'frozen') {
-            this.shotDeterminer();
-            this.scoopDeterminer();
-            return drinkTitle.innerHTML = `${this._size} ${this._type} ${this._name}`;
-        } else {
-            this.shotDeterminer();
-            this.pumpDeterminer();
-            return drinkTitle.innerHTML = `${this._size} ${this._type} ${this._name}`;
+        let name = `${this.size} ${this.type} ${this.name}`;
+        switch (name) {
+            case "small hot Latte":
+            case "medium hot Latte":
+            case "large hot Latte":
+            case "small iced Latte":
+            case "medium iced Latte":
+            case "large iced Latte":
+            case "small frozen Latte":
+            case "medium frozen Latte":
+            case "large frozen Latte":
+                this.shotDeterminer();
+                this.pumpDeterminer();
+                break;
+            case "small hot Mocha":
+            case "medium hot Mocha":
+            case "large hot Mocha":
+            case "small iced Mocha":
+            case "medium iced Mocha":
+            case "large iced Mocha":
+            case "small frozen Mocha":
+            case "medium frozen Mocha":
+            case "large frozen Mocha":
+                this.shotDeterminer();
+                this.scoopDeterminer();
+                break;
+            case "small hot Cappuccino":
+            case "medium hot Cappuccino":
+            case "large hot Cappuccino":
+                this.shotDeterminer();
+                this.pumpDeterminer();
+                break;
         }
+        return drinkTitle.innerHTML = name;
     }
 }
 
