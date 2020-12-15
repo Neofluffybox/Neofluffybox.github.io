@@ -245,11 +245,15 @@ function resetDisplay(x) {
 
 function resetContent() {
     shotsCheckerBox.value = '';
+    shotsCheckerBox.style.color = 'black';
     pumpsCheckerBox.value = '';
+    pumpsCheckerBox.style.color = 'black';
     scoopsCheckerBox.value = '';
+    scoopsCheckerBox.style.color = 'black';
     checkedShots.innerHTML = '';
     checkedPumps.innerHTML = '';
     checkedScoops.innerHTML = '';
+
 }
 
 //menu
