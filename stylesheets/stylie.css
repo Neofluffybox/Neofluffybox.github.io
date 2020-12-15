@@ -243,8 +243,9 @@ footer{
     header{
         width: 270px;
     }
-    #skyrim {
-        width: 58px;
+    .goBtn {
+        width: 55px;
+        font-size: 11;
     }
     .buttons {
         padding: 6px;
@@ -260,13 +261,10 @@ footer{
     }
     .goBtn {
         font-size: 12px;
-        width: 55px;
+        width: 60px;
     }
     header{
         width: 350px;
-    }
-    #skyrim {
-        width: 70px;
     }
 }
 
@@ -280,9 +278,6 @@ footer{
     header{
         width: 500px;
     }
-    #skyrim {
-        width: 78px;
-    }
 }
 @media only screen and (min-width: 1001px) {
     body {
@@ -293,9 +288,6 @@ footer{
     }
     header{
         width: 680px;
-    }
-    #skyrim {
-        width: 100px;
     }
     .buttons {
         padding: 10px;

@@ -58,38 +58,38 @@ class beverage {
         let name = `${this.size} ${this.type} ${this.name}`;
         let shots;
         switch (name) {
-            case 'small hot Latte':
-            case 'small hot Cappuccino':
-            case 'small hot Mocha':
-            case 'small iced Latte':
-            case 'small iced Mocha':
+            case 'Small Hot Latte':
+            case 'Small Hot Cappuccino':
+            case 'Small Hot Mocha':
+            case 'Small Iced Latte':
+            case 'Small Iced Mocha':
                 shots = 2;
                 break;
-            case 'medium hot Latte':
-            case 'medium hot Cappuccino':
-            case 'medium hot Mocha':
-            case 'medium iced Latte':
-            case 'medium iced Mocha':
+            case 'Medium Hot Latte':
+            case 'Medium Hot Cappuccino':
+            case 'Medium Hot Mocha':
+            case 'Medium Iced Latte':
+            case 'Medium Iced Mocha':
                 shots = 2;
                 break;
-            case 'large iced Latte':
-            case 'large iced Mocha':
+            case 'Large Iced Latte':
+            case 'Large Iced Mocha':
                 shots = 3;
-            case 'large hot Latte':
-            case 'large hot Cappuccino':
-            case 'large hot Mocha':
+            case 'Large Hot Latte':
+            case 'Large Hot Cappuccino':
+            case 'Large Hot Mocha':
                 shots = 4;
                 break;
-            case 'small frozen Latte':
-            case 'small frozen Mocha':
+            case 'Small Frozen Latte':
+            case 'Small Frozen Mocha':
                 shots = 6;
                 break;
-            case 'medium frozen Latte':
-            case 'medium frozen Mocha':
+            case 'Medium Frozen Latte':
+            case 'Medium Frozen Mocha':
                 shots = 8;
                 break;
-            case 'large frozen Latte':
-            case 'large frozen Mocha':
+            case 'Large Frozen Latte':
+            case 'Large Frozen Mocha':
                 shots = 10
                 break;
         }
@@ -100,24 +100,24 @@ class beverage {
         let name = `${this.size} ${this.type} ${this.name}`;
         let pumps;
         switch (name) {
-            case 'small hot Latte':
-            case 'small hot Cappuccino':
-            case 'small iced Latte':
+            case 'Small Hot Latte':
+            case 'Small Hot Cappuccino':
+            case 'Small Iced Latte':
                 pumps = 2;
                 break;
-            case 'medium hot Latte':
-            case 'medium hot Cappuccino':
-            case 'medium iced Latte':
-            case 'small frozen Latte':
+            case 'Medium Hot Latte':
+            case 'Medium Hot Cappuccino':
+            case 'Medium Iced Latte':
+            case 'Small Frozen Latte':
                 pumps = 3;
                 break;
-            case 'large hot Latte':
-            case 'large hot Cappuccino':
-            case 'large iced Latte':
-            case 'medium frozen Latte':
+            case 'Large Hot Latte':
+            case 'Large Hot Cappuccino':
+            case 'Large Iced Latte':
+            case 'Medium Frozen Latte':
                 pumps = 4;
                 break;
-            case 'large frozen Latte':
+            case 'Large Frozen Latte':
                 pumps = 5;
                 break;
         }
@@ -128,21 +128,21 @@ class beverage {
         let name = `${this.size} ${this.type} ${this.name}`;
         let scoops;
         switch (name) {
-            case 'small hot Mocha':
-            case 'small iced Mocha':
+            case 'Small Hot Mocha':
+            case 'Small Iced Mocha':
                 scoops = 2;
                 break;
-            case 'medium hot Mocha':
-            case 'medium iced Mocha':
-            case 'small frozen Mocha':
+            case 'Medium Hot Mocha':
+            case 'Medium Iced Mocha':
+            case 'Small Frozen Mocha':
                 scoops = 2.5;
                 break;
-            case 'large hot Mocha':
-            case 'large iced Mocha':
-            case 'medium frozen Mocha':
+            case 'Large Hot Mocha':
+            case 'Large Iced Mocha':
+            case 'Medium Frozen Mocha':
                 scoops = 3;
                 break;
-            case 'large frozen Mocha':
+            case 'Large Frozen Mocha':
                 scoops = 3.5;
                 break;
         }
@@ -154,33 +154,33 @@ class beverage {
         resetDisplay('#scoops');
         let name = `${this.size} ${this.type} ${this.name}`;
         switch (name) {
-            case "small hot Latte":
-            case "medium hot Latte":
-            case "large hot Latte":
-            case "small iced Latte":
-            case "medium iced Latte":
-            case "large iced Latte":
-            case "small frozen Latte":
-            case "medium frozen Latte":
-            case "large frozen Latte":
+            case "Small Hot Latte":
+            case "Medium Hot Latte":
+            case "Large Hot Latte":
+            case "Small Iced Latte":
+            case "Medium Iced Latte":
+            case "Large Iced Latte":
+            case "Small Frozen Latte":
+            case "Medium Frozen Latte":
+            case "Large Frozen Latte":
                 this.shotDeterminer();
                 this.pumpDeterminer();
                 break;
-            case "small hot Mocha":
-            case "medium hot Mocha":
-            case "large hot Mocha":
-            case "small iced Mocha":
-            case "medium iced Mocha":
-            case "large iced Mocha":
-            case "small frozen Mocha":
-            case "medium frozen Mocha":
-            case "large frozen Mocha":
+            case "Small Hot Mocha":
+            case "Medium Hot Mocha":
+            case "Large Hot Mocha":
+            case "Small Iced Mocha":
+            case "Medium Iced Mocha":
+            case "Large Iced Mocha":
+            case "Small Frozen Mocha":
+            case "Medium Frozen Mocha":
+            case "Large Frozen Mocha":
                 this.shotDeterminer();
                 this.scoopDeterminer();
                 break;
-            case "small hot Cappuccino":
-            case "medium hot Cappuccino":
-            case "large hot Cappuccino":
+            case "Small Hot Cappuccino":
+            case "Medium Hot Cappuccino":
+            case "Large Hot Cappuccino":
                 this.shotDeterminer();
                 this.pumpDeterminer();
                 break;
@@ -213,13 +213,13 @@ class beverage {
 }
 
 let randomSize = () => {
-    let sizes = ['small', 'medium', 'large'];
+    let sizes = ['Small', 'Medium', 'Large'];
     let num = Math.floor(Math.random() * sizes.length);
     return sizes[num];
 }
 
 let randomType = () => {
-    let types = ['hot', 'iced', 'frozen'];
+    let types = ['Hot', 'Iced', 'Frozen'];
     let num = Math.floor(Math.random() * types.length);
     return types[num];
 }
@@ -253,27 +253,26 @@ function resetContent() {
     checkedShots.innerHTML = '';
     checkedPumps.innerHTML = '';
     checkedScoops.innerHTML = '';
-
 }
 
 //menu
 let drinkList = [];
 
-let hotLatte = new beverage('Latte', 'hot', randomSize())
+let hotLatte = new beverage('Latte', 'Hot', randomSize())
 drinkList.push(hotLatte);
-let icedLatte = new beverage('Latte', 'iced', randomSize())
+let icedLatte = new beverage('Latte', 'Iced', randomSize())
 drinkList.push(icedLatte);
-let frozenLatte = new beverage('Latte', 'frozen', randomSize())
+let frozenLatte = new beverage('Latte', 'Frozen', randomSize())
 drinkList.push(frozenLatte);
 
-let Cappuccino = new beverage('Cappuccino', 'hot', randomSize())
+let Cappuccino = new beverage('Cappuccino', 'Hot', randomSize())
 drinkList.push(Cappuccino);
 
-let hotMocha = new beverage('Mocha', 'hot', randomSize())
+let hotMocha = new beverage('Mocha', 'Hot', randomSize())
 drinkList.push(hotMocha);
-let icedMocha = new beverage('Mocha', 'iced', randomSize())
+let icedMocha = new beverage('Mocha', 'Iced', randomSize())
 drinkList.push(icedMocha);
-let frozenMocha = new beverage('Mocha', 'frozen', randomSize())
+let frozenMocha = new beverage('Mocha', 'Frozen', randomSize())
 drinkList.push(frozenMocha);
 
 //buttons
